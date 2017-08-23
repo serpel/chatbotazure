@@ -11,7 +11,7 @@
     <h1>Animated Popup Information</h1>
     
     <div class='wrap'>
-        <iframe class="content" width='100%' height='100%' src='https://webchat.botframework.com/embed/chatbotgrintsys?s=u6Hhg_1Gctw.cwA.Gyw.rQmsUDB6u8NZ59woZt39MZt8VRVSdjyYTiTotyMXmD4'></iframe>
+        <iframe class="content" width='100%' height='100%' src='https://webchat.botframework.com/embed/chatbotgrintsys?s=91WPUDkwr08.cwA.R5E.t48V0OkmEtFmM-366XaTTKsPzOreCP-W93OjRAwYPPA'></iframe>
     </div>
 
     <a class='button oi oi-chat azurechat' href='#'></a>
@@ -23,7 +23,9 @@
     <script>    
         $(document).ready(function() {
             setTimeout(function() {
-                $("a.azurechat").trigger('click');
+                if(!$("a.azurechat").hasClass('active')) {
+                    $("a.azurechat").trigger('click');
+                }
             }, 5000);
         });
         $('a.azurechat').on('click', function(){
